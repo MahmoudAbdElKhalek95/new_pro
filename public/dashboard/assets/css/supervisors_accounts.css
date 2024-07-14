@@ -1,0 +1,161 @@
+/* Start supervisors-accounts section style */
+.supervisors-accounts{
+    padding: 30px;
+   
+
+}
+@media (max-width:576px) {
+    .supervisors-accounts{
+        padding: 5px;
+       
+    
+    }
+    
+}
+.supervisors-accounts  h3{
+    font-family: "DIN Next LT Arabic";
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 11px;
+    color: #354052;
+    margin-bottom: 20px;
+}
+@media (max-width:576px) {
+    .supervisors-accounts  h3{
+        font-size: 20px;
+
+       
+    
+    }
+    
+}
+.supervisors-accounts  .custom-btn{
+    width: 300px;
+    padding: 12px;
+}
+@media (max-width:767px) {
+
+    .supervisors-accounts  .custom-btn{
+      width: 100%;
+      padding: 12px;
+  }
+  }
+.supervisors-accounts .supervisors{
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #d2e1ff;
+
+}
+@media (max-width:576px) {
+    .supervisors-accounts .supervisors{
+        padding:25px 10px;
+       
+    
+    }
+    
+}
+.supervisors-accounts .supervisors .search-box .search-btn{
+    width: 110px;
+    padding: 0px 0 1px 0;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DIN Next LT Arabic";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #354052;
+    outline: none;
+    border: none;
+
+
+background: #d8dae5
+}
+.supervisors-accounts .supervisors .supervisors-list{
+    margin: 20px 0;
+}
+.supervisors-accounts .supervisors .supervisors-list .actions button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.supervisors-accounts .supervisors .supervisors-list .actions span{
+    font-family: "DIN Next LT Arabic";
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    font-style: normal;
+    color: #b4b4b4;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box{
+    border-color: #d2d5e1;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box .image{
+    position: relative;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box .image .status{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    background: #0a5856ad;
+    color: #FFF;
+    font-family: "DIN Next LT Arabic";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 13px;
+    font-style: normal;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box  .supervisor-info{
+    padding: 10px;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box  .supervisor-info .head{
+    font-family: "DIN Next LT Arabic";
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    font-style: normal;
+    color: #0f1222;
+    display: block;
+}
+.supervisors-accounts .supervisors .supervisors-list .supervisor-box  .supervisor-info .supervisor-data{
+    font-family: "DIN Next LT Arabic";
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    font-style: normal;
+    display: block;
+    color: #898f8f;
+}
+
+
+
+
+
+/* End supervisors-accounts section style */
+
+
+
+/* Start modal */
+@media (max-width:991px) {
+    ._modal ._modal-content .form{
+        height: 70vh;
+        overflow-y: scroll;
+    
+    }
+}
+._modal ._modal-content .form .custom-btn{
+    width: 100%;
+        
+    font-family: "DIN Next LT Arabic";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+}

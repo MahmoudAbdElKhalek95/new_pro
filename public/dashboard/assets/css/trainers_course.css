@@ -1,0 +1,186 @@
+/* Start trainers_course section style */
+.trainers_course{
+    padding: 30px;
+   
+
+}
+@media (max-width:576px) {
+    .trainers_course{
+        padding: 5px;
+       
+    
+    }
+    .trainers_course .container-fluid{
+        padding: 15px;
+       
+    
+    }
+  
+    
+}
+.trainers_course  h3{
+    font-family: "DIN Next LT Arabic";
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 11px;
+    color: #354052;
+}
+@media (max-width:576px) {
+    .trainers_course  h3{
+        font-size: 20px;
+  
+       
+    
+    }
+    
+  }
+.trainers_course .course-box{
+    padding: 25px 20px;
+    border:2px solid #d2e1ff;
+    border-radius: 8px;
+    background: #ffffff;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    max-height: 700px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+}
+.trainers_course .course-box.show{
+    max-height: 1500px;
+}
+.trainers_course .course-box .course-description{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d2e1ff;
+}
+.trainers_course .course-box .course-heading{
+    font-family: "DIN Next LT Arabic";
+font-size: 22px;
+font-weight: bold;
+line-height: 34px;
+font-style: normal;
+text-align: right;
+color: #2e2e2e;
+}
+.trainers_course .course-box .course-price .price{
+    font-family: "DIN Next LT Arabic";
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 73px;
+    font-style: normal;
+    color: #005250;
+}
+.trainers_course .course-box .course-price .price-for{
+   
+    font-family: "DIN Next LT Arabic";
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 33px;
+    font-style: normal;
+
+    color: #67696d;
+}
+@media (max-width:576px) {
+    .trainers_course .course-box .course-price .price{
+        font-size: 25px;
+    } 
+    .trainers_course .course-box .course-price .price-for{
+        font-size:12px;
+    } 
+    
+}
+.trainers_course .course-box p{
+    padding: 20px 0;
+    font-family: "DIN Next LT Arabic";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #67696d;
+}
+.trainers_course .course-box .custom-btn{
+    width: 100%;
+    padding: 12px;
+    border-radius: 28px;
+    font-family: "DIN Next LT Arabic";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #0a5856;
+    color: #ffffff;
+    border: 2px solid transparent;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+
+
+}
+.trainers_course .course-box .custom-btn:hover{
+ 
+    background-color: transparent;
+    border-color: #0a5856;
+    color: #354052;
+}
+.trainers_course .course-box .course-standards{
+    padding: 15px 0;
+
+}
+.trainers_course .course-box .course-standards h4{
+    font-family: "DIN Next LT Arabic";
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    font-style: normal;
+    color: #1b2e4f;
+
+}
+.trainers_course .course-box .course-standards ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.trainers_course .course-box .course-standards ul li{
+    padding: 10px 0;
+    font-family: "DIN Next LT Arabic";
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    font-style: normal;
+    color:var(--word-color);
+}
+.trainers_course .course-box .course-standards ul li img{
+    padding-left: 10px;
+}
+.trainers_course .course-box .show-all-standards{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    border-radius: 8px;
+  
+    background: linear-gradient(0deg, 
+    #dfdfdf 0.00%, 
+    rgba(255,255,255,0.74 ) 100.00%);
+    }
+    .trainers_course .course-box .show-all-standards h4{
+        margin-bottom: 20px;
+        font-family: "DIN Next LT Arabic";
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        font-style: normal;
+        color: #0a5856;
+        border-bottom: 2px solid var(--main-color);
+        cursor: pointer;
+    }
+    .trainers_course .course-box .show-all-standards.close{
+        height: 0;
+        overflow: hidden;
+    }
+/* End trainers_course section style */

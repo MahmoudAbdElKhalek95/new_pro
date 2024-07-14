@@ -1,0 +1,127 @@
+/* Start reports section style */
+*{
+    direction: unset;
+}
+body{
+    direction: rtl;
+}
+
+.reports{
+    padding: 30px;
+   
+
+}
+@media (max-width:576px) {
+    .reports{
+        padding: 5px;
+       
+    
+    }
+    
+}
+.reports  h3{
+    font-family: "DIN Next LT Arabic";
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 11px;
+    color: #354052;
+    margin-bottom: 20px;
+}
+@media (max-width:576px) {
+  .reports  h3{
+      font-size: 20px;
+
+     
+  
+  }
+  
+}
+.reports .reports-box .reports-name h4{
+    font-family: "DIN Next LT Arabic";
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 12px;
+    font-style: normal;
+    color: #354052;
+}
+.reports .reports-box .reports-name a{
+    text-decoration:none;
+    font-family: "DIN Next LT Arabic";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 12px;
+    font-style: normal;
+    text-align: left;
+    color: #0a5856;
+}
+.reports .reports-box .report-box {
+    border: 1px solid #e2e2ea;
+    border-radius: 12px;
+    padding: 10px;
+
+
+background: #ffffff
+}
+.reports .reports-box .report-box .title{
+    font-family: "DIN Next LT Arabic";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+    text-align: right;
+    color: #091b3d;
+    margin-bottom: 20px;
+}
+.owl-carousel {
+ 
+    position: relative;
+    direction: ltr;
+  }
+  /* To disable arrows on first and last slide */
+  .disabled{
+      display: none;
+    }
+  
+  /* fix blank or flashing items on carousel */
+  .owl-carousel .item {
+    position: relative;
+    z-index: 100; 
+    -webkit-backface-visibility: hidden; 
+  }
+  
+  /* end fix */
+  
+  
+  .owl-nav i {
+    font-size: 52px;
+  }
+  
+  .owl-nav .owl-prev {
+    position: absolute;
+    top: 25%;
+    left: -30px;
+    width: 55.5px;
+    height: 57.1px;
+    border: 1px solid #eaedf7 !important;
+    border-radius: 101px;
+    filter: drop-shadow(0px 2px 2px rgba(28,41,90,0.04 ));
+
+    background: #ffffff !important
+  }
+  
+  .owl-nav .owl-next {
+      position: absolute;
+      top: 25%;
+      right: -30px;
+      width: 55.5px;
+    height: 57.1px;
+    border: 1px solid #eaedf7 !important;
+    border-radius: 101px;
+    filter: drop-shadow(0px 2px 2px rgba(28,41,90,0.04 ));
+
+    background: #ffffff !important
+  }
+  .owl-carousel  .item .report-box{
+    direction: rtl;
+  }
+  

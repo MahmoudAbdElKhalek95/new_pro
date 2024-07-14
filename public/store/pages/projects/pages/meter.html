@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>إهداء متر وقفي</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script type='text/javascript'>
+        (function(e, t, n) {
+            if (e.snaptr) return;
+            var a = e.snaptr = function() {
+                a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments)
+            };
+            a.queue = [];
+            var s = 'script';
+            r = t.createElement(s);
+            r.async = !0;
+            r.src = n;
+            var u = t.getElementsByTagName(s)[0];
+            u.parentNode.insertBefore(r, u);
+        })(window, document,
+            'https://sc-static.net/scevent.min.js');
+
+        snaptr('init', 'bc53a6b1-1fbd-4800-8b7c-ad6846d171f2', {
+            'user_email': '_INSERT_USER_EMAIL_'
+        });
+
+        snaptr('track', 'PAGE_VIEW');
+    </script>
+
+</head>
+
+<body>
+
+    <div x-data="{ amount: 1, pickingDate: false }">
+
+        <!-- header -->
+        <div class="row main-nav">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../../../assets/img/logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../../index.html">الرئيسية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../projects.html">المشاريع</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#fastDonationModal" href="./fast-donation.html">التبرع السريع</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../bank-accounts.html">حساباتنا البنكية</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                            <a class="nav-link" href="./tax-certificate.html">شهادة التسجيل الضريبي</a>
+                        </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../about-us.html">من نحن</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="../../../assets/img/account.svg" width="24" height="24" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div class="row" style="margin-top: 72px; margin-bottom: 72px;row-gap: 12px;">
+                <div class="col-12 col-lg-7 justify-content-center justify-content-lg-start d-flex">
+                    <img src="../img/meter-1.png" width="546" height="580" alt="">
+                </div>
+                <div class="col-12 col-lg-5 justify-content-center d-flex flex-column">
+                    <h2 class="fw-bold">إهداء المتر الوقفي</h2>
+                    <P class="mb-1">ين يديك مرابحة مع الكريم .. القليل يتضاعف ببركة القرآن .. أجوراً وشرفاً .</P>
+                    <div class="mt-3">
+                        <p>اختر الحد الأقصى للتبرع :</p>
+                        <div class="d-flex">
+                            <button class="btn label primary" type="button">110 ريال</button>
+                            <button class="btn label primary mx-3" type="button">300 ريال</button>
+                            <button class="btn label primary" type="button">500 ريال</button>
+                        </div>
+                    </div>
+                    <div class="mt-5 mb-3">
+                        <span>الهدية من*</span>
+                        <div class="d-flex justify-content-center mt-1">
+                            <input style="background-color: rgba(45, 167, 173, 0.06) !important; height: 64.13px !important;" class="form-control borderless" type="text" aria-label="">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>الهدية إلى*</span>
+                        <div class="d-flex justify-content-center mt-1">
+                            <input style="background-color: rgba(45, 167, 173, 0.06) !important; height: 64.13px !important;" class="form-control borderless" type="text" aria-label="">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>جوال المهدي اليه*</span>
+                        <div class="d-flex justify-content-center mt-1">
+                            <input style="background-color: rgba(45, 167, 173, 0.06) !important; height: 64.13px !important;" class="form-control borderless" type="text" aria-label="">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>بطاقة الإهداء*</span>
+                        <div class="d-flex justify-content-center mt-1">
+                            <input style="background-color: rgba(45, 167, 173, 0.06) !important; height: 64.13px !important;" class="form-control borderless" type="text" aria-label="">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <span>الكمية</span>
+                        <div class="amount-counter mt-2" style="color: #2DA7AD;">
+                            <img x-on:click="amount++" src="../../../assets/img/plus.svg" width="24" height="24" alt="">
+                            <span x-text="amount" style="color: #000; font-size: 24px;" class="fw-bold mx-2"></span>
+                            <img x-on:click="amount > 1 ? amount-- : ''" src="../../../assets/img/minus.svg" width="24" height="24" alt="">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex">
+                            <span class="d-block">حدد وقت الإهداء :</span>
+                            <div class="d-flex align-items-center me-4">
+                                <input @click="pickingDate = false" class="form-check-input ms-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <p class="fw-bold mb-0">الأن</p>
+                            </div>
+                            <div class="d-flex align-items-center me-3">
+                                <input @click="pickingDate = true" class="form-check-input ms-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <p class="fw-bold mb-0">لاحقاً</p>
+                            </div>
+                        </div>
+
+                        <div x-cloak x-show="pickingDate" class="mt-4" x-transition>
+
+                            <button id="date_picker" style="width: 220px; height: 48px; border-radius: 10px;" class="btn mb-3 bg-outlined-primary position-relative" type="button">
+                                    <img src="../../../assets/img/calendar.svg" width="20" height="20" alt="">
+                                    <span class="date-text">تاريخ الإهداء</span>
+                                    <input class="flatpickr custome-date" type="text" placeholder="" data-input>
+                                </button>
+                            <button id="time_picker" style="width: 220px; height: 48px; border-radius: 10px;" class="btn mb-3 bg-outlined-primary  position-relative" type="button">
+                                    <img src="../../../assets/img/timer.svg" width="20" height="20" alt="">
+                                    <span class="time-text">وقت الإهداء</span>
+                                    <input class="flatpickr custome-date" type="text" placeholder="" data-input>
+                                </button>
+                        </div>
+                    </div>
+                    <button style="height: 64px;" class="btn fw-bold bg-primary mt-4 align-self-center align-self-lg-start w-100" type="button">إهداء</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="row px-5 footer" style="background-color: #EAF6F7;">
+            <div class="col-12 col-lg-6 mt-5">
+                <img class="mb-4" src="../../../assets/img/iqraa-logo.svg" width="143.64" height="109.9" alt="">
+                <p class="mb-4">الجمعية الخيرية لتحفيظ القرآن الكريم في بريدة هي إحدى الجمعيات التابعة لوزارة الموارد البشرية والتنمية الاجتماعية </p>
+                <div>
+                    <a href="#"><img src="../../../assets/img/facebook-logo.svg" width="24" height="24" alt=""></a>
+                    <a href="#"><img src="../../../assets/img/snapchat-logo.svg" width="24" height="24" alt=""></a>
+                    <a href="#"><img src="../../../assets/img/twitter-logo.svg" width="24" height="24" alt=""></a>
+                    <a href="#"><img src="../../../assets/img/insta-logo.svg" width="24" height="24" alt=""></a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <p class="ms-4">شهادة التسجيل الضريبي</p>
+                    <img src="../../../assets/img/certificate.png" width="63.45" height="92.45" alt="">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 d-flex justify-content-center" style="margin-top: 130px;">
+                <ul class="no-bullets">
+                    <li style="color: #2DA7AD" class="fw-bold mb-3">الروابط الرئيسية</li>
+                    <li class="mb-2"><a href="../../../index.html">الصفحة الرئيسية</a></li>
+                    <li class="mb-2"><a href="../../about-us.html">من نحن</a></li>
+                    <li class="mb-2"><a href="../../projects.html">المشاريع</a></li>
+                    <li class="mb-2"><a href="../../fast-donation.html">التبرع السريع</a></li>
+                    <li class="mb-2"><a href="../../bank-accounts.html">حساباتنا البنكية</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-3 d-flex justify-content-center" style="margin-top: 130px;">
+                <ul class="no-bullets">
+                    <li style="color: #2DA7AD" class="fw-bold mb-3">تواصل معنا</li>
+                    <li class="d-flex flex-column mb-2">
+                        <div class="mb-1">
+                            <img src="../../../assets/img/address.svg" width="20" height="20" alt="">
+                            <span>العنوان :</span>
+                        </div>
+                        <span class="fw-bold">القصيم بريدة - شارع التغيرة</span>
+                    </li>
+                    <li class="d-flex flex-column mb-2">
+                        <div class="mb-1">
+                            <img src="../../../assets/img/phone.svg" width="20" height="20" alt="">
+                            <span>رقم الجوال :</span>
+                        </div>
+                        <span class="fw-bold">0553269999</span>
+                    </li>
+                    <li class="d-flex flex-column mb-2">
+                        <div class="mb-1">
+                            <img src="../../../assets/img/mail.svg" width="20" height="20" alt="">
+                            <span>البريد الإلكتروني : </span>
+                        </div>
+                        <span class="fw-bold">info@qb.org.sa</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <span>جميع الحقوق محفوظة لـ</span>
+                        <a href="../index.html" class="fw-bold">            شركة ارام المستقبل</a>
+                        <span>@2023</span>
+                    </div>
+                    <div>
+                        <span>تصميم وبرمجة شركة</span>
+                        <a href="#">نيوبي</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Fast Donation Modal -->
+    <div class="modal fade" id="fastDonationModal" tabindex="-1" aria-labelledby="fastDonationModalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div style="width: 570px; height: 401px;" class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row h-100">
+                        <div class="col p-5 position-relative">
+                            <h3 class="fw-bold mb-2">إدعمنا بما تجود به</h3>
+                            <p style="font-size: 14px;" class="mb-5">{ ما نقص مال من صدقة بل تزده بل تزده }</p>
+                            <div>
+                                <p style="font-size: 14px;" class="mb-3">اضف المبلغ</p>
+                                <input class="form-control borderless" type="text" placeholder="أدخل المبلغ" aria-label="">
+                            </div>
+                            <div style="bottom: 16px; width: 80%; right: 35px;" class="d-grid gap-2 position-absolute">
+                                <button style="width: 100%" class="btn fw-bold bg-primary" type="button">تبرع الأن</button>
+                            </div>
+                        </div>
+                        <div class="col d-none d-md-block cover position-relative">
+                            <img style="cursor: pointer; left: 16px; top: 16px" width="28" height="28" src="../../../assets/img/close.svg" class="position-absolute" data-bs-dismiss="modal" aria-label="Close" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ar.js"></script>
+
+
+    <script>
+        flatpickr.localize(flatpickr.l10ns.ar);
+        let optional_date_config = {
+            wrap: true,
+            onChange: function(selectedDates, dateStr, instance) {
+                let el = document.querySelector('.date-text');
+                el.innerText = dateStr;
+            },
+            //locale: "ar",
+        };
+
+        $("#date_picker").flatpickr(optional_date_config);
+
+        let optional_time_config = {
+            wrap: true,
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            onChange: function(selectedDates, dateStr, instance) {
+                let el = document.querySelector('.time-text');
+                el.innerText = dateStr;
+            },
+            //locale: "ar",
+        };
+
+        $("#time_picker").flatpickr(optional_time_config);
+    </script>
+
+
+</body>
+
+</html>

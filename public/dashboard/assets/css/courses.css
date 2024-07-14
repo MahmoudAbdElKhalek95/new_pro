@@ -1,0 +1,219 @@
+
+.courses{
+    padding: 30px;
+   
+
+}
+@media (max-width:576px) {
+    .courses{
+        padding: 5px;
+       
+    
+    }
+    
+}
+.courses  h3{
+    font-family: "DIN Next LT Arabic";
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 11px;
+    color: #354052;
+    margin-bottom: 20px;
+}
+@media (max-width:576px) {
+  .courses  h3{
+      font-size: 20px;
+
+     
+  
+  }
+  
+}
+.courses  .custom-btn{
+    width: 300px;
+    padding: 12px;
+}
+@media (max-width:767px) {
+
+  .courses  .custom-btn{
+    width: 100%;
+    padding: 12px;
+}
+}
+
+.courses .supervisors{
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #d2e1ff;
+
+
+}
+@media (max-width:576px) {
+    .courses .supervisors{
+        padding:25px 10px;
+       
+    
+    }
+    
+}
+.courses .supervisors .search-box .search-btn{
+    width: 110px;
+    padding: 0px 0 1px 0;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DIN Next LT Arabic";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #354052;
+    outline: none;
+    border: none;
+
+
+background: #d8dae5
+}
+  .table-wrap{
+    overflow-x: scroll;
+
+  }
+  table.sortable{
+    min-width: 1000px;
+    width: 100%;
+  }
+  table.sortable td,
+  table.sortable th {
+    /* padding: .125em 0.25em0; */
+    padding: 20px 0;
+    width: 8em;
+    text-align: center;
+    font-family: "DIN Next LT Arabic";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 14px;
+    font-style: normal;
+    color: #272727;
+
+  }
+  table.sortable td a{
+    text-decoration: none;
+    color: #272727;
+
+  }
+  
+  table.sortable th {
+    font-weight: bold;
+    position: relative;
+  }
+  
+  table.sortable th.no-sort {
+    padding: 20px 0;
+    
+  }
+  
+  table.sortable th:nth-child(5) {
+    width: 10em;
+  }
+  
+  table.sortable th button {
+    padding: 4px;
+    margin: 1px;
+    font-size: 100%;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    display: inline;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  table.sortable th button span {
+    position: absolute;
+    right: 4px;
+  }
+  
+  table.sortable th[aria-sort="descending"] span::after {
+    content: url(../images/sorting.png);
+    color: currentcolor;
+    top: 0;
+    right: 0
+  }
+  
+  table.sortable th[aria-sort="ascending"] span::after {
+    content: url(../images/sorting.png);
+    color: currentcolor;
+    top: 0;
+    right: 0;
+  }
+  
+  table.show-unsorted-icon th:not([aria-sort]) button span::after {
+    content: url(../images/sorting.png);;
+    color: currentcolor;
+    position: relative;
+    top: -3px;
+    left: -4px;
+  }
+  
+  table.sortable td {
+    text-align: center;
+   
+  }
+
+  
+  table.sortable thead tr {
+    background-color: #E0E8F5;
+    border-radius: 15px;
+    border-bottom: 1px solid #E0E8F5;
+
+  }
+  table.sortable .status{
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 15px 20px 20px 20px;
+    border-radius: 20px;
+    background: #C3D6D6;
+  } 
+
+  
+  /* Focus and hover styling */
+  
+
+  
+  table.sortable th button:focus span,
+  table.sortable th button:hover span {
+    right: 2px;
+  }
+  
+  table.sortable th:not([aria-sort]) button:focus span::after,
+  table.sortable th:not([aria-sort]) button:hover span::after {
+    content: url(../images/sorting.png);
+    color: currentcolor;
+    top: 0;
+  }
+  
+
+
+  
+/* Start modal */
+@media (max-width:991px) {
+  ._modal ._modal-content .form{
+      height: 70vh;
+      overflow-y: scroll;
+  
+  }
+}
+._modal ._modal-content .form .custom-btn{
+  width: 100%;
+      
+  font-family: "DIN Next LT Arabic";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+}
