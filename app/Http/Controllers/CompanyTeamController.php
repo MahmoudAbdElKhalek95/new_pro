@@ -7,15 +7,16 @@ use App\Models\Notifcation;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use App\Models\CompanyCourse;
+use App\Models\CompanyTeam;
 use App\Models\TrainerCourse;
 
-class AboutController extends Controller
+class CompanyTeamController extends Controller
 {
 
     public function index()
     {
-        $data['about'] = About::paginate(5);
-        return view('abouts.index', $data ) ;
+        $data['company_team'] = CompanyTeam::paginate(5);
+        return view('company_team.index', $data ) ;
 
     }
 
@@ -38,13 +39,13 @@ class AboutController extends Controller
 
         if($request->file('image')) {
 
-            $image = upload($request->file('image'), 'about');
+            $image = upload($request->file('image'), 'CompanyTeam');
           }else{
              $image =  null  ;
           }
 
 
-            $about = About::create([
+            $company_team = CompanyTeam::create([
 
                 'name'             => $request->name,
                 'description'      => $request->description,
@@ -61,8 +62,8 @@ class AboutController extends Controller
     public function edit(  $id  )
     {
 
-        $data['about'] = About::find( $id );
-        return view('abouts.edit', $data ) ;
+        $data['company_team'] = CompanyTeam::find( $id );
+        return view('company_team.edit', $data ) ;
 
 
     }
@@ -71,7 +72,7 @@ class AboutController extends Controller
     public function update( Request $request , $id   )
     {
 
-        $about = About::find( $id );
+        $company_team = CompanyTeam::find( $id );
         $request->validate([
 
             'name'            => 'sometimes|nullable|string|min:3',
@@ -82,14 +83,14 @@ class AboutController extends Controller
 
         if($request->file('image')) {
 
-            deleteFile(  $about->image  ) ;
-            $image = upload($request->file('image'), 'about');
+            deleteFile(  $company_team->image  ) ;
+            $image = upload($request->file('image'), 'company_team');
 
           }else{
-             $image =  $about->image  ;
+             $image =  $company_team->image  ;
           }
 
-              $about->update([
+              $company_team->update([
 
                 'name'                    => $request->name,
                 'description'             => $request->description,
@@ -103,15 +104,15 @@ class AboutController extends Controller
 
     public function activate ( $id )
     {
-         $about = About::where('id' , $id)->first() ;
-        if( $about->active==1  )
+         $company_team = CompanyTeam::where('id' , $id)->first() ;
+        if( $company_team->active==1  )
         {
-            $about->active = 0 ;
-            $about->save() ;
+            $company_team->active = 0 ;
+            $company_team->save() ;
         } else{
 
-            $about->active = 1 ;
-            $about->save() ;
+            $company_team->active = 1 ;
+            $company_team->save() ;
 
         }
 
@@ -121,10 +122,10 @@ class AboutController extends Controller
 
     public function destroy( Request $request , $id )
     {
-        $data = about::where('id' , $id)->first() ;
+        $data = CompanyTeam::where('id' , $id)->first() ;
         deleteFile(  $data->image  ) ;
         $data->delete() ;
-        return redirect()->route('about.index')->with(['success'=>'تمت العملــية بنجاح !!']);
+        return redirect()->route('company_team.index')->with(['success'=>'تمت العملــية بنجاح !!']);
 
     }
 

@@ -1,17 +1,17 @@
 
 
 @extends('dashboard.layouts.mainapp')
-@section('title' , 'من نجن ')
+@section('title' , 'تاريح الشركه ')
 @section('content')
 <section class="supervisors-accounts">
     <div class="container-fluid">
         <div class="d-md-flex align-items-center justify-content-between mb-4">
-            <h3 class=""><img src="{{ asset('dashboard/assets/images/header_icon1.png') }}" class="me-2">من نجن </h3>
+            <h3 class=""><img src="{{ asset('dashboard/assets/images/header_icon1.png') }}" class="me-2">تاريح الشركه </h3>
 
             @if( auth()->user()->role_id == 1  )
             {{-- <button class="custom-btn trigger" ><img class="pe-2" src="{{ asset('dashboard/assets/images/pluse.png')}}"><span>اضافة مشروع </span></button> --}}
 
-            @include('abouts.CreateModel')
+            @include('history.CreateModel')
             @endif
         </div>
         <div class="supervisors">
@@ -80,7 +80,7 @@
               </thead>
               <tbody>
 
-             @foreach ( $about as $item )
+             @foreach ( $history as $item )
             <tr>
                 {{--  <td>  <input class="form-check-input" type="checkbox" value=""  id="flexCheckDefault1"></td>  --}}
                 <td>  {{ $item->name ?? '' }}  </td>
@@ -88,7 +88,7 @@
                 <td>  <img src= "{{  asset($item->image) }}" alt ="image" width="150px" height="150px">   </td>
            
                 <td class="edit-btn ">
-                        <a class="btn btn-success"  href="{{ route('about.activate' , $item->id ) }}" >
+                        <a class="btn btn-success"  href="{{ route('history.activate' , $item->id ) }}" >
                                 {{ $item->active == 1  ? ' نشط'  : 'غير نشط' }}
                         </a>
                        
@@ -97,14 +97,14 @@
                  
                     <div class="row">
                         <div class="col-md-4">
-                            <a class="btn btn-success " href="{{ route('about.edit', $item->id) }}">
+                            <a class="btn btn-success " href="{{ route('history.edit', $item->id) }}">
                                 تعديل
                                 </a>
                       </div>
                             <div class="col-md-4">
                             <form 
                             onclick="return confirm('Are you sure you want to delete this item?');"
-                            action="{{ route('about.destroy', $item->id) }}" method="POST">
+                            action="{{ route('history.destroy', $item->id) }}" method="POST">
                                 @csrf
                                 @method("DELETE")
                                 <input class="btn btn-danger"   type="submit" value="جذف" >
@@ -121,7 +121,7 @@
                 <div class=" col-md-4" >
                    </div>
                 <div class="col-md-4" >
-                 {{ $about->render("pagination::bootstrap-4") }}
+                 {{ $history->render("pagination::bootstrap-4") }}
                 </div>
                 <div class=" col-md-4" >
                 </div>

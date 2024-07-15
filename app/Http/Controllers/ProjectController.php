@@ -25,20 +25,14 @@ class ProjectController extends Controller
 
     public function store( Request $request  )
     {
-
-
         $request->validate([
-
             'name'                      => 'required|string|min:3',
             'description'                    => 'required|string',
             'image'                    => 'required|mimes:png,jpg,jpeg',
-    
         ],[
-
             'name.required'            => ' إسم المشروع مطلوب' ,
             'description.required'    => ' الوصف مطلوب' ,
             'image.required'          => ' الصوره  مطلوب' ,
-    
         ]);
 
         if($request->file('image')) {
@@ -47,14 +41,11 @@ class ProjectController extends Controller
           }else{
              $image =  null  ;
           }
-
-
             $Project = Project::create([
 
                 'name'             => $request->name,
                 'description'      => $request->description,
                 'image'            =>   $image,
-             
             ]);
 
             return back()->with(['success'=>'تمت العملــية بنجاح !!']);
@@ -104,6 +95,16 @@ class ProjectController extends Controller
 
             return back()->with(['success'=>'تمت العملــية بنجاح !!']);
 
+
+    }
+
+
+    public function destroy( Request $request , $id )
+    {
+        $data = Project::where('id' , $id)->first() ;
+        deleteFile(  $data->image  ) ;
+        $data->delete() ;
+        return redirect()->route('getProject')->with(['success'=>'تمت العملــية بنجاح !!']);
 
     }
 

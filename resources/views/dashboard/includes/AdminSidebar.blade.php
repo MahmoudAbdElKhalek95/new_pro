@@ -87,7 +87,7 @@
     <div class="option d-flex align-items-center">
        <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
        <h3 class="large-aside">
-        المشاريغ
+        المشاريع
        </h3>
        <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
     </div>
@@ -117,6 +117,26 @@
        <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
     </div>
   </a>
+
+  <a href="{{ route('company_team.index')  }}" >
+   <div class="option d-flex align-items-center">
+      <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
+      <h3 class="large-aside">
+       الشركه والفريق
+      </h3>
+      <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
+   </div>
+ </a>
+
+ <a href="{{ route('history.index')  }}" >
+   <div class="option d-flex align-items-center">
+      <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
+      <h3 class="large-aside">
+         تاريح الشركه
+      </h3>
+      <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
+   </div>
+ </a>
 
   {{--  @endcan  --}}
 

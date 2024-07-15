@@ -7,15 +7,16 @@ use App\Models\Notifcation;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use App\Models\CompanyCourse;
+use App\Models\History;
 use App\Models\TrainerCourse;
 
-class AboutController extends Controller
+class HistoryController extends Controller
 {
 
     public function index()
     {
-        $data['about'] = About::paginate(5);
-        return view('abouts.index', $data ) ;
+        $data['history'] = History::paginate(5);
+        return view('history.index', $data ) ;
 
     }
 
@@ -38,13 +39,13 @@ class AboutController extends Controller
 
         if($request->file('image')) {
 
-            $image = upload($request->file('image'), 'about');
+            $image = upload($request->file('image'), 'History');
           }else{
              $image =  null  ;
           }
 
 
-            $about = About::create([
+            $history = History::create([
 
                 'name'             => $request->name,
                 'description'      => $request->description,
@@ -61,8 +62,8 @@ class AboutController extends Controller
     public function edit(  $id  )
     {
 
-        $data['about'] = About::find( $id );
-        return view('abouts.edit', $data ) ;
+        $data['history'] = History::find( $id );
+        return view('history.edit', $data ) ;
 
 
     }
@@ -71,7 +72,7 @@ class AboutController extends Controller
     public function update( Request $request , $id   )
     {
 
-        $about = About::find( $id );
+        $history = History::find( $id );
         $request->validate([
 
             'name'            => 'sometimes|nullable|string|min:3',
@@ -82,14 +83,14 @@ class AboutController extends Controller
 
         if($request->file('image')) {
 
-            deleteFile(  $about->image  ) ;
-            $image = upload($request->file('image'), 'about');
+            deleteFile(  $history->image  ) ;
+            $image = upload($request->file('image'), 'history');
 
           }else{
-             $image =  $about->image  ;
+             $image =  $history->image  ;
           }
 
-              $about->update([
+              $history->update([
 
                 'name'                    => $request->name,
                 'description'             => $request->description,
@@ -103,15 +104,15 @@ class AboutController extends Controller
 
     public function activate ( $id )
     {
-         $about = About::where('id' , $id)->first() ;
-        if( $about->active==1  )
+         $history = History::where('id' , $id)->first() ;
+        if( $history->active==1  )
         {
-            $about->active = 0 ;
-            $about->save() ;
+            $history->active = 0 ;
+            $history->save() ;
         } else{
 
-            $about->active = 1 ;
-            $about->save() ;
+            $history->active = 1 ;
+            $history->save() ;
 
         }
 
@@ -121,10 +122,10 @@ class AboutController extends Controller
 
     public function destroy( Request $request , $id )
     {
-        $data = about::where('id' , $id)->first() ;
+        $data = History::where('id' , $id)->first() ;
         deleteFile(  $data->image  ) ;
         $data->delete() ;
-        return redirect()->route('about.index')->with(['success'=>'تمت العملــية بنجاح !!']);
+        return redirect()->route('history.index')->with(['success'=>'تمت العملــية بنجاح !!']);
 
     }
 

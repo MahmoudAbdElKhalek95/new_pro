@@ -84,7 +84,9 @@ class PartinerController extends Controller
              
             ]);
 
-            return back()->with(['success'=>'تمت العملــية بنجاح !!']);
+            return redirect()->route('partiner.index')->with(['success'=>'تمت العملــية بنجاح !!']);
+          
+           // return back()->with(['success'=>'تمت العملــية بنجاح !!']);
 
 
     }
@@ -106,6 +108,16 @@ class PartinerController extends Controller
 
 
         return back()->with('success' , 'تم الحفظ' );
+
+    }
+
+
+    public function destroy( Request $request , $id )
+    {
+        $data = Partiner::where('id' , $id)->first() ;
+        deleteFile(  $data->image  ) ;
+        $data->delete() ;
+        return redirect()->route('partiner.index')->with(['success'=>'تمت العملــية بنجاح !!']);
 
     }
 

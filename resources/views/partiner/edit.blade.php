@@ -14,26 +14,25 @@
         <form  enctype="multipart/form-data" method="post"  action="{{ route('partiner.update' , $partiner->id) }}">
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="row">
-                <span class="mb-3" style="display: inline-block">معومات عامة</span>
-                <div class="col-md-12">
-                    <div class="input-text">
-                    
-                      <label>النوع  </label>
-                      <select class="form-control"  name="type"  >
-                          <option value=""> اختر </option>
-                          <option value="sponsors" {{ $partiner->type  =='sponsors' ? 'selected' : ''  }} >الشركاء </option>
-                          <option value="confirmation"  {{  $partiner->type =='confirmation' ? 'selected' : ''  }} > جهات الاعتماد  </option>
 
-                      </select>
+              <div class="col-md-12">
+                <div class="selected-option">
+                  <div class="label"> الفئة العمريه </div>
+                  <select  class="form-select"  name ="type"  >
 
-                    </div>
-                       @error('type')
-                       <div class="alert alert-danger" >
-                        {{ $message }}
-                       </div>
-                       @enderror
-                  </div>
+                    <option  value=""  > ب    اختر</option>
+                    <option value="sponsors"  {{    $partiner->type =='sponsors'  ? 'selected' : ''    }}> الشركاء </option>
+                    <option value="confirmation"  {{    $partiner->type =='confirmation'  ? 'selected' : ''    }}>  جهات الاعتماد  </option>
+
+                  </select>
+                </div>
+                @error('age')
+                <div class="alert alert-danger" >
+                 {{ $message }}
+                </div>
+                @enderror
+              </div> 
+
 
                 
 

@@ -111,6 +111,15 @@ class ServiceController extends Controller
 
     }
 
+    public function destroy( Request $request , $id )
+    {
+        $data = Service::where('id' , $id)->first() ;
+        deleteFile(  $data->image  ) ;
+        $data->delete() ;
+        return redirect()->route('service.index')->with(['success'=>'تمت العملــية بنجاح !!']);
+
+    }
+
 
 }
 

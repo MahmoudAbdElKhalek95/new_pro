@@ -1,6 +1,6 @@
 <a class="btn btn-success "   data-bs-toggle="modal" data-bs-target="#editexampleModal" >
     <i class="fa fa-pencil" aria-hidden="true"></i>
-    أضف المشاريع
+    أضف الشركه والفريق
   </a>
 
 
@@ -9,12 +9,12 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="header-modal" style="display: flex;justify-content: space-between;align-items: center">
-            <h5 class="modal-title" id="exampleModalLabel">أضف انواع المشاريع</h5>
+            <h5 class="modal-title" id="exampleModalLabel">أضف انواع الشركه والفريق</h5>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">اغلاق</button>
           </div>
           <hr>
 
-          <form enctype="multipart/form-data"   method="post" enctype="multipart/form-data" action="{{ route('about.store') }}">
+          <form enctype="multipart/form-data"   method="post" enctype="multipart/form-data" action="{{ route('company_team.store') }}">
             @csrf
         <div class="form py-5  px-4">
             <div class="row">

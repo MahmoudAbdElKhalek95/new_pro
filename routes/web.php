@@ -15,6 +15,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\GalaryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartinerController;
+use App\Http\Controllers\CompanyTeamController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,6 +82,15 @@ Route::resource('about', AboutController::class);
 Route::get('about/activate/{id}', [AboutController::class, 'activate'])->name('about.activate');
 Route::resource('partiner', PartinerController::class);
 Route::get('partiner/activate/{id}', [PartinerController::class, 'activate'])->name('partiner.activate');
+Route::resource('company_team', CompanyTeamController::class);
+Route::get('company_team/activate/{id}', [CompanyTeamController::class, 'activate'])->name('company_team.activate');
+Route::resource('history', HistoryController::class);
+Route::get('history/activate/{id}', [HistoryController::class, 'activate'])->name('history.activate');
+
+
+
+
+
 
 //Route::resource('galary', GalaryController::class);
 
@@ -106,6 +117,8 @@ Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'index']
 Route::post('/createproject', [App\Http\Controllers\ProjectController::class, 'store'])->name('createProject');
 Route::get('/editproject/{id}', [App\Http\Controllers\ProjectController::class, 'edit'])->name('editProject');
 Route::put('/updateproject/{id}', [App\Http\Controllers\ProjectController::class, 'update'])->name('updateProject');
+Route::delete('/projects/{id}', [App\Http\Controllers\ProjectController::class, 'destroy'])->name('projects.destroy');
+
 
 /////////////////////////////////// galary //////////////////////
 

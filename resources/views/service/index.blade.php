@@ -48,9 +48,9 @@
             <table class="table">
               <thead>
                 <tr class="head-table">
-                    <th scope="col">
+                    {{--  <th scope="col">
                     <input class="check-all form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </th>
+                    </th>  --}}
                     <th scope="col">
                         الاسم
                     <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -80,7 +80,7 @@
 
              @foreach ( $services as $item )
             <tr>
-                <td>  <input class="form-check-input" type="checkbox" value=""  id="flexCheckDefault1"></td>
+                {{--  <td>  <input class="form-check-input" type="checkbox" value=""  id="flexCheckDefault1"></td>  --}}
                 <td>  {{ $item->name ?? '' }}  </td>
                 <td>  {{ $item->description ?? '' }}  </td>
                 <td>  <img src= "{{  asset($item->image) }}" alt ="image" width="150px" height="150px">   </td>
@@ -91,9 +91,23 @@
                     </a>
                 </td>
                 <td class="edit-btn ">
-                    <a class="btn btn-success " href="{{ route('service.edit', $item->id) }}">
-                    تعديل
-                    </a>
+                  
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="btn btn-success " href="{{ route('service.edit', $item->id) }}">
+                             تعديل
+                            </a>
+                      </div>
+                            <div class="col-md-4">
+                            <form 
+                            onclick="return confirm('Are you sure you want to delete this item?');"
+                            action="{{ route('service.destroy', $item->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <input class="btn btn-danger"   type="submit" value="جذف" >
+                              </form>
+                            </div>
+                        </div>
                 </td>
             </tr>
             @endforeach
