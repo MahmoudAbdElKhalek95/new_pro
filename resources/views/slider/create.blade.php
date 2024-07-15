@@ -1,6 +1,6 @@
 <a class="btn btn-success "   data-bs-toggle="modal" data-bs-target="#editexampleModal" >
     <i class="fa fa-pencil" aria-hidden="true"></i>
-    أضف الشركاء 
+    أضف السليدر 
   </a>
 
 
@@ -9,7 +9,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="header-modal" style="display: flex;justify-content: space-between;align-items: center">
-            <h5 class="modal-title" id="exampleModalLabel">أضف  الشركاء </h5>
+            <h5 class="modal-title" id="exampleModalLabel">أضف  السليدر </h5>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">اغلاق</button>
           </div>
           <hr>

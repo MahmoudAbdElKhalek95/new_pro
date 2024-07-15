@@ -51,12 +51,22 @@
     <div class="option d-flex align-items-center">
        <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
        <h3 class="large-aside">
-        الشركاء
+        السليدر
        </h3>
        <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
     </div>
   </a>
   {{--  @endcan  --}}
+
+  <a href="{{ route('partiner.index')  }}" >
+   <div class="option d-flex align-items-center">
+      <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
+      <h3 class="large-aside">
+       الشركاء
+      </h3>
+      <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
+   </div>
+ </a>
 
   {{--  @can('news-List')  --}}
 
@@ -83,6 +93,16 @@
     </div>
   </a>
   {{--  @endcan  --}}
+
+  <a href="{{ route('service.index')  }}" >
+   <div class="option d-flex align-items-center">
+      <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
+      <h3 class="large-aside">
+       الخدمات
+      </h3>
+      <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
+   </div>
+ </a>
 
 
 

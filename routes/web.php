@@ -11,8 +11,10 @@ use App\Http\Controllers\RolesController ;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\SettingController;
-
-
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\GalaryController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PartinerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,15 +37,15 @@ Route::get('/home/logout', [App\Http\Controllers\HomeController::class, 'logout'
 
 Route::get('/', function () {
 
-   /* $data['slider'] = Slider::where('active' , 1)->get() ;
+    $data['slider'] = Slider::where('active' , 1)->get() ;
     $data['courses'] = Course::limit(6)->get() ;
     $data['training'] = Training::limit(6)->get() ;
 
-    return view('store' , $data);*/
+    return view('store' , $data);
    // return  redirect()->route('home.getLogin' );
-    return redirect()->route('home') ;
+   // return redirect()->route('home') ;
 
-});  //->name('store');
+})->name('store');
 
 Route::get('/login', function () {
      return view('auth.login');
@@ -67,10 +69,20 @@ Route::resource('sliders', SliderController::class);
 
 
 Route::get('sliders/activate/{id}', [SliderController::class, 'activate'])->name('sliders.activate');
+
 Route::resource('news', NewsController::class);
 Route::get('news/activate/{id}', [NewsController::class, 'activate'])->name('news.activate');
-Route::resource('about', AboutUsController::class);
+Route::resource('aboutus', AboutUsController::class);
 Route::resource('setting', SettingController::class);
+Route::resource('service', ServiceController::class);
+Route::resource('about', AboutController::class);
+
+Route::get('about/activate/{id}', [AboutController::class, 'activate'])->name('about.activate');
+Route::resource('partiner', PartinerController::class);
+Route::get('partiner/activate/{id}', [PartinerController::class, 'activate'])->name('partiner.activate');
+
+//Route::resource('galary', GalaryController::class);
+
 
 
 
@@ -80,7 +92,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/project_follow', [App\Http\Controllers\HomeController::class, 'project_follow'])->name('project_follow');
 
 
-Route::get('/profile', [App\Http\Controllers\PageController::class, 'profilePage'])->name('profilePage');
 
 
 ///////////////////////////////// start  new add  ////////////////////
@@ -96,6 +107,13 @@ Route::post('/createproject', [App\Http\Controllers\ProjectController::class, 's
 Route::get('/editproject/{id}', [App\Http\Controllers\ProjectController::class, 'edit'])->name('editProject');
 Route::put('/updateproject/{id}', [App\Http\Controllers\ProjectController::class, 'update'])->name('updateProject');
 
+/////////////////////////////////// galary //////////////////////
+
+Route::get('/galary/{id}', [GalaryController::class, 'index'])->name('galary.index');
+Route::get('/creat_galary/{id}', [GalaryController::class, 'create'])->name('galary.create');
+Route::post('/galary/{id}', [GalaryController::class, 'store'])->name('galary.store');
+Route::get('/edit_galary/{id}', [GalaryController::class, 'edit'])->name('galary.edit');
+Route::Put('/update_galary/{id}', [GalaryController::class, 'update'])->name('galary.update');
 
 
 

@@ -1,6 +1,6 @@
 <a class="btn btn-success "   data-bs-toggle="modal" data-bs-target="#editexampleModal" >
     <i class="fa fa-pencil" aria-hidden="true"></i>
-    أضف المشاريع
+    أضف الصور
   </a>
 
 
@@ -9,42 +9,17 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="header-modal" style="display: flex;justify-content: space-between;align-items: center">
-            <h5 class="modal-title" id="exampleModalLabel">أضف انواع المشاريع</h5>
+            <h5 class="modal-title" id="exampleModalLabel">أضف  الصور</h5>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">اغلاق</button>
           </div>
           <hr>
 
-          <form  method="post" enctype="multipart/form-data" action="{{ route('createProject') }}">
+          <form enctype="multipart/form-data"   method="post" enctype="multipart/form-data" action="{{ route('galary.store' ,  $id ) }}">
             @csrf
         <div class="form py-5  px-4">
-            <div class="row">
-            <div class="d-lg-flex align-items-center  mb-2 ">
-                <div class="w-100 pe-lg-3">
-                    <div class="input-field w-100">
-                        <label>اسم المشروع  </label>
-                        <input type="text" name="name" value="{{ old('name') }}"  placeholder="اسم المشروع ">
-                    </div>
-                    @error('name')
-                    <div class="alert alert-danger" >
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-            </div>
-            <div class="row">
-                <div class="w-100 pe-lg-3">
-                    <div class="input-field w-100">
-                        <label>وصف المشروع  </label>
-                          <textarea type="text" rows="4" cols="50" name="description"  placeholder="وصف المشروع">{{ old('description') }}</textarea>
-                    </div>
-                    @error('description')
-                    <div class="alert alert-danger" >
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-            </div>
-        </div>
+         
+            <input type="hidden" name="type" value="{{$type ?? null }}">
+        
         <div class="row">
             <div class="d-lg-flex align-items-center ">
                 <div class=" w-100 pe-lg-3">

@@ -1,6 +1,6 @@
 
 @extends('dashboard.layouts.mainapp')
-@section('title', 'الشركاء')
+@section('title', 'السليدر')
 @section('content')
 
 
@@ -13,7 +13,7 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <div class="row">
-                <span class="mb-3" style="display: inline-block">الشركاء</span>
+                <span class="mb-3" style="display: inline-block">السليدر</span>
 
 
                 <div class="col-md-12">

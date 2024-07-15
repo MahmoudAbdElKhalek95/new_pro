@@ -1,7 +1,7 @@
 
 
 @extends('dashboard.layouts.mainapp')
-@section('title', ' الشركاء')
+@section('title', ' السليدر')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/css/trainers_course.css">
 @endsection
@@ -10,7 +10,7 @@
    <section class="trainers_course">
 
             <div class="d-md-flex align-items-center justify-content-between mb-4">
-                <h3 class=""><img src="{{ asset('dashboard/assets/images/header_icon1.png') }}" class="me-2">الشركاء</h3>
+                <h3 class=""><img src="{{ asset('dashboard/assets/images/header_icon1.png') }}" class="me-2">السليدر</h3>
 
 
                 @if( auth()->user()->role_id==1)

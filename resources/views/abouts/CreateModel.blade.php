@@ -14,15 +14,15 @@
           </div>
           <hr>
 
-          <form  method="post" enctype="multipart/form-data" action="{{ route('createProject') }}">
+          <form enctype="multipart/form-data"   method="post" enctype="multipart/form-data" action="{{ route('service.store') }}">
             @csrf
         <div class="form py-5  px-4">
             <div class="row">
             <div class="d-lg-flex align-items-center  mb-2 ">
                 <div class="w-100 pe-lg-3">
                     <div class="input-field w-100">
-                        <label>اسم المشروع  </label>
-                        <input type="text" name="name" value="{{ old('name') }}"  placeholder="اسم المشروع ">
+                        <label>الاسم  </label>
+                        <input type="text" name="name" value="{{ old('name') }}"  placeholder="الاسم ">
                     </div>
                     @error('name')
                     <div class="alert alert-danger" >
@@ -34,8 +34,8 @@
             <div class="row">
                 <div class="w-100 pe-lg-3">
                     <div class="input-field w-100">
-                        <label>وصف المشروع  </label>
-                          <textarea type="text" rows="4" cols="50" name="description"  placeholder="وصف المشروع">{{ old('description') }}</textarea>
+                        <label>الوصف  </label>
+                          <textarea type="text" rows="10" cols="100" name="description"  placeholder="الوصف">{{ old('description') }}</textarea>
                     </div>
                     @error('description')
                     <div class="alert alert-danger" >

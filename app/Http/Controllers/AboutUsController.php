@@ -22,10 +22,12 @@ class AboutUsController extends Controller
 
     function __construct()
     {
-         $this->middleware('permission:about-List|about-Create', ['only' => ['index','store']]);
+       /*
+        $this->middleware('permission:about-List|about-Create', ['only' => ['index','store']]);
          $this->middleware('permission:about-Create', ['only' => ['store']]);
          $this->middleware('permission:about-Edit', ['only' => ['edit','update']]);
          $this->middleware('permission:about-Delete', ['only' => ['destroy']]);
+         */
     }
 
 

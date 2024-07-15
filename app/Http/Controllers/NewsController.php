@@ -21,10 +21,10 @@ class NewsController extends Controller
 
     function __construct()
     {
-         $this->middleware('permission:news-List|news-Create', ['only' => ['index','store']]);
+       /*  $this->middleware('permission:news-List|news-Create', ['only' => ['index','store']]);
          $this->middleware('permission:news-Create', ['only' => ['store']]);
          $this->middleware('permission:news-Edit', ['only' => ['edit','update']]);
-         $this->middleware('permission:news-Delete', ['only' => ['destroy']]);
+         $this->middleware('permission:news-Delete', ['only' => ['destroy']]);*/
     }
 
 

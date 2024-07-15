@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Course;
-use App\Models\Company;
-use App\Models\Project;
-use App\Models\Student;
+use App\Models\about;
 use App\Models\Notifcation;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use App\Models\CompanyCourse;
 use App\Models\TrainerCourse;
 
-class ProjectController extends Controller
+class AboutController extends Controller
 {
 
     public function index()
     {
 
-        $data['projects'] = Project::paginate(5);
-        return view('project.index', $data ) ;
+        $data['about'] = About::paginate(5);
+        return view('abouts.index', $data ) ;
+
     }
 
     public function store( Request $request  )
@@ -31,25 +28,25 @@ class ProjectController extends Controller
 
             'name'                      => 'required|string|min:3',
             'description'                    => 'required|string',
-            'image'                    => 'required|mimes:png,jpg,jpeg',
+           // 'image'                    => 'required|mimes:png,jpg,jpeg',
     
         ],[
 
             'name.required'            => ' إسم المشروع مطلوب' ,
             'description.required'    => ' الوصف مطلوب' ,
-            'image.required'          => ' الصوره  مطلوب' ,
+            //'image.required'          => ' الصوره  مطلوب' ,
     
         ]);
 
         if($request->file('image')) {
 
-            $image = upload($request->file('image'), 'projects');
+            $image = upload($request->file('image'), 'about');
           }else{
              $image =  null  ;
           }
 
 
-            $Project = Project::create([
+            $about = About::create([
 
                 'name'             => $request->name,
                 'description'      => $request->description,
@@ -66,35 +63,36 @@ class ProjectController extends Controller
     public function edit(  $id  )
     {
 
-        $data['project'] = Project::find( $id );
-        return view('project.edit', $data ) ;
+        $data['about'] = About::find( $id );
+        return view('abouts.edit', $data ) ;
+
+
     }
 
 
     public function update( Request $request , $id   )
     {
 
-        $project = Project::find( $id );
-
+        $about = About::find( $id );
         $request->validate([
 
             'name'            => 'sometimes|nullable|string|min:3',
             'desscription'    => 'sometimes|nullable|string',
-            'image'           => 'sometimes|nullable|mimes:png,jpg,jpeg',
+          //  'image'           => 'sometimes|nullable|mimes:png,jpg,jpeg',
            
 
         ]);
 
         if($request->file('image')) {
 
-            deleteFile(  $project->image  ) ;
-            $image = upload($request->file('image'), 'projects');
+            deleteFile(  $about->image  ) ;
+            $image = upload($request->file('image'), 'about');
 
           }else{
-             $image =  $project->image  ;
+             $image =  $about->image  ;
           }
 
-              $project->update([
+              $about->update([
 
                 'name'                    => $request->name,
                 'description'             => $request->description,
@@ -104,6 +102,26 @@ class ProjectController extends Controller
 
             return back()->with(['success'=>'تمت العملــية بنجاح !!']);
 
+
+    }
+
+    public function activate ( $id )
+    {
+
+         $about = About::where('id' , $id)->first() ;
+        if( $about->active==1  )
+        {
+            $about->active = 0 ;
+            $about->save() ;
+        } else{
+
+            $about->active = 1 ;
+            $about->save() ;
+
+        }
+
+
+        return back()->with('success' , 'تم الحفظ' );
 
     }
 
