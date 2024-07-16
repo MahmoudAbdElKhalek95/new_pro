@@ -138,6 +138,18 @@
    </div>
  </a>
 
+ <a href="{{ route('vision.index')  }}" >
+   <div class="option d-flex align-items-center">
+      <img class="large-aside" src="{{ asset('dashboard/assets/images/setting.png')}}">
+      <h3 class="large-aside">
+         الروية والفلفسة الخاصة بنا
+      </h3>
+      <img class="small-aside" src="{{ asset('dashboard/assets/images/setting_sm.png')}} ">
+   </div>
+ </a>
+
+     
+
   {{--  @endcan  --}}
 
   {{--  @can('about-List')  --}}

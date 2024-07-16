@@ -17,6 +17,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartinerController;
 use App\Http\Controllers\CompanyTeamController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\VisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +87,8 @@ Route::resource('company_team', CompanyTeamController::class);
 Route::get('company_team/activate/{id}', [CompanyTeamController::class, 'activate'])->name('company_team.activate');
 Route::resource('history', HistoryController::class);
 Route::get('history/activate/{id}', [HistoryController::class, 'activate'])->name('history.activate');
+Route::resource('vision', VisionController::class);
+Route::get('vision/activate/{id}', [VisionController::class, 'activate'])->name('vision.activate');
 
 
 
