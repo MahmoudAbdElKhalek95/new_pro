@@ -52,6 +52,8 @@ class SettingController extends Controller
             'contact_number'               =>  'numeric' ,
             'adress'                       =>  'string' ,
             'gppgle_map_link'              =>  'url' ,
+            'email'                        =>  'email' ,
+
 
             ],[
 
@@ -59,11 +61,13 @@ class SettingController extends Controller
             ]);
 
 
-            $setting          =  Setting::first() ;
+            $setting                    =  Setting::first() ;
             $setting->contact_number    =   $request->contact_number  ;
             $setting->adress            =   $request->adress  ;
             $setting->gppgle_map_link   =   $request->gppgle_map_link  ;
-
+            $setting->email             =   $request->email  ;
+            $setting->fax               =   $request->fax  ;
+            $setting->whatsapp          =   $request->whatsapp  ;
             $setting->save() ;
      
 

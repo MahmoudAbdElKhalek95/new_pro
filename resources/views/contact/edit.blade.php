@@ -66,8 +66,6 @@
                   </div>
                 </div>
 
-
-
                   <div class="row">
                   <div class="col-md-12">
                     <div class="input-text">
@@ -81,11 +79,6 @@
                        @enderror
                   </div>
                 </div>
-
-
-              
-
-                  
 
                   <div class="col-md-12">
                     <button  style="margin-bottom: 25px;" type="submit" class="btn btn-success save-btn form-control"> حفظ  </button>
