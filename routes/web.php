@@ -18,6 +18,9 @@ use App\Http\Controllers\PartinerController;
 use App\Http\Controllers\CompanyTeamController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\VisionController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +92,14 @@ Route::resource('history', HistoryController::class);
 Route::get('history/activate/{id}', [HistoryController::class, 'activate'])->name('history.activate');
 Route::resource('vision', VisionController::class);
 Route::get('vision/activate/{id}', [VisionController::class, 'activate'])->name('vision.activate');
+Route::resource('certificate', CertificateController::class);
+Route::get('certificate/activate/{id}', [CertificateController::class, 'activate'])->name('certificate.activate');
+Route::resource('contact', ContactController::class);
+Route::get('contact/activate/{id}', [CertificateController::class, 'activate'])->name('contact.activate');
+
+
+
+
 
 
 
